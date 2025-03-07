@@ -6,12 +6,12 @@ import { CameraIcon, UserIcon, HeartIcon, ImageIcon } from "lucide-react";
 export const Home = () => {
   return <div className="w-full">
       <HeroSlider />
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <section className="px-4 py-24 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-light text-gray-900 mb-8">
-            Welcome to LENS Photography
+          <h2 className="mb-8 text-3xl font-light text-gray-900">
+            Welcome to Anne Lowe Photography
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto mb-12">
+          <p className="max-w-2xl mx-auto mb-12 text-gray-600">
             With over a decade of experience capturing life's most precious
             moments, we specialize in creating timeless photographs that tell
             your unique story.
@@ -21,12 +21,12 @@ export const Home = () => {
           </Link>
         </div>
       </section>
-      <section className="bg-gray-50 py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-light text-center mb-16 text-gray-900">
+      <section className="py-24 bg-gray-50">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <h2 className="mb-16 text-3xl font-light text-center text-gray-900">
             Our Services
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {[{
             icon: <CameraIcon size={32} />,
             title: "Wedding Photography",
@@ -43,11 +43,11 @@ export const Home = () => {
             icon: <ImageIcon size={32} />,
             title: "Event Coverage",
             description: "Documenting your special events and celebrations"
-          }].map((service, index) => <div key={index} className="text-center p-6 bg-white rounded-lg shadow-sm">
-                <div className="text-gray-600 mb-4 flex justify-center">
+          }].map((service, index) => <div key={index} className="p-6 text-center bg-white rounded-lg shadow-sm">
+                <div className="flex justify-center mb-4 text-gray-600">
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-medium mb-2 text-gray-900">
+                <h3 className="mb-2 text-xl font-medium text-gray-900">
                   {service.title}
                 </h3>
                 <p className="text-gray-600">{service.description}</p>
@@ -56,11 +56,11 @@ export const Home = () => {
         </div>
       </section>
       <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-light text-center mb-16 text-gray-900">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <h2 className="mb-16 text-3xl font-light text-center text-gray-900">
             Featured Work
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {[{
             image: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80",
             category: "Weddings",
@@ -73,9 +73,9 @@ export const Home = () => {
             image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80",
             category: "Events",
             title: "Corporate Gala"
-          }].map((work, index) => <div key={index} className="group cursor-pointer">
+          }].map((work, index) => <div key={index} className="cursor-pointer group">
                 <div className="overflow-hidden rounded-lg shadow-sm">
-                  <img src={work.image} alt={work.title} className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <img src={work.image} alt={work.title} className="object-cover w-full transition-transform duration-700 h-80 group-hover:scale-110" />
                 </div>
                 <div className="mt-4">
                   <p className="text-sm text-gray-500">{work.category}</p>
@@ -85,19 +85,19 @@ export const Home = () => {
                 </div>
               </div>)}
           </div>
-          <div className="text-center mt-12">
+          <div className="mt-12 text-center">
             <Link to="/gallery">
               <Button variant="primary">View All Work</Button>
             </Link>
           </div>
         </div>
       </section>
-      <section className="bg-gray-50 py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-light text-center mb-16 text-gray-900">
+      <section className="py-24 bg-gray-50">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <h2 className="mb-16 text-3xl font-light text-center text-gray-900">
             Client Testimonials
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             {[{
             quote: "Working with LENS was an absolute pleasure. They captured our wedding day perfectly!",
             author: "Emily & James",
@@ -110,8 +110,8 @@ export const Home = () => {
             quote: "Professional, creative, and a joy to work with. Highly recommended!",
             author: "Michael Roberts",
             role: "Corporate Client"
-          }].map((testimonial, index) => <div key={index} className="bg-white p-6 shadow-sm rounded-lg">
-                <p className="text-gray-600 mb-4 italic">
+          }].map((testimonial, index) => <div key={index} className="p-6 bg-white rounded-lg shadow-sm">
+                <p className="mb-4 italic text-gray-600">
                   "{testimonial.quote}"
                 </p>
                 <p className="font-medium text-gray-900">
@@ -122,9 +122,9 @@ export const Home = () => {
           </div>
         </div>
       </section>
-      <section className="py-24 bg-gray-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-light mb-8">
+      <section className="py-24 text-white bg-gray-900">
+        <div className="px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
+          <h2 className="mb-8 text-3xl font-light">
             Ready to Create Something Beautiful?
           </h2>
           <p className="max-w-2xl mx-auto mb-12 text-gray-300">
@@ -133,12 +133,12 @@ export const Home = () => {
           </p>
           <div className="flex justify-center gap-4">
             <Link to="/contact">
-              <button className="px-8 py-3 bg-white text-gray-900 hover:bg-gray-100 transition-colors rounded-md shadow-sm hover:shadow">
+              <button className="px-8 py-3 text-gray-900 transition-colors bg-white rounded-md shadow-sm hover:bg-gray-100 hover:shadow">
                 Get in Touch
               </button>
             </Link>
             <Link to="/pricing">
-              <button className="px-8 py-3 bg-transparent border-2 border-white text-white hover:bg-white/10 transition-colors rounded-md">
+              <button className="px-8 py-3 text-white transition-colors bg-transparent border-2 border-white rounded-md hover:bg-white/10">
                 View Pricing
               </button>
             </Link>
