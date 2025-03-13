@@ -3,10 +3,20 @@ import { Link } from "react-router-dom";
 import { HeroSlider } from "../components/HeroSlider";
 import { Button } from "../components/Button";
 import { CameraIcon, UserIcon, HeartIcon, ImageIcon } from "lucide-react";
-export const Home = () => {
-  return <div className="w-full">
+import { motion } from "framer-motion"; // Import framer-motion
+
+export const Home: React.FC = () => {
+  return (
+    <div className="w-full">
       <HeroSlider />
-      <section className="px-4 py-24 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      {/* Welcome Section */}
+      <motion.section
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="px-4 py-24 mx-auto max-w-7xl sm:px-6 lg:px-8"
+      >
         <div className="text-center">
           <h2 className="mb-8 text-3xl font-light text-gray-900">
             Welcome to Anne Lowe Photography
@@ -20,30 +30,51 @@ export const Home = () => {
             <Button variant="secondary">Learn More</Button>
           </Link>
         </div>
-      </section>
-      <section className="py-24 bg-gray-50">
+      </motion.section>
+
+      {/* Services Section */}
+      <motion.section
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        viewport={{ once: true }}
+        className="py-24 bg-gray-50"
+      >
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <h2 className="mb-16 text-3xl font-light text-center text-gray-900">
             Our Services
           </h2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {[{
-            icon: <CameraIcon size={32} />,
-            title: "Wedding Photography",
-            description: "Capturing your special day with elegance and style"
-          }, {
-            icon: <UserIcon size={32} />,
-            title: "Portrait Sessions",
-            description: "Professional portraits that reflect your personality"
-          }, {
-            icon: <HeartIcon size={32} />,
-            title: "Engagement Photos",
-            description: "Celebrating your love story with beautiful imagery"
-          }, {
-            icon: <ImageIcon size={32} />,
-            title: "Event Coverage",
-            description: "Documenting your special events and celebrations"
-          }].map((service, index) => <div key={index} className="p-6 text-center bg-white rounded-lg shadow-sm">
+            {[
+              {
+                icon: <CameraIcon size={32} />,
+                title: "Wedding Photography",
+                description: "Capturing your special day with elegance and style",
+              },
+              {
+                icon: <UserIcon size={32} />,
+                title: "Portrait Sessions",
+                description: "Professional portraits that reflect your personality",
+              },
+              {
+                icon: <HeartIcon size={32} />,
+                title: "Engagement Photos",
+                description: "Celebrating your love story with beautiful imagery",
+              },
+              {
+                icon: <ImageIcon size={32} />,
+                title: "Event Coverage",
+                description: "Documenting your special events and celebrations",
+              },
+            ].map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                className="p-6 text-center bg-white rounded-lg shadow-sm"
+              >
                 <div className="flex justify-center mb-4 text-gray-600">
                   {service.icon}
                 </div>
@@ -51,31 +82,56 @@ export const Home = () => {
                   {service.title}
                 </h3>
                 <p className="text-gray-600">{service.description}</p>
-              </div>)}
+              </motion.div>
+            ))}
           </div>
         </div>
-      </section>
-      <section className="py-24 bg-white">
+      </motion.section>
+
+      {/* Featured Work Section */}
+      <motion.section
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        viewport={{ once: true }}
+        className="py-24 bg-white"
+      >
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <h2 className="mb-16 text-3xl font-light text-center text-gray-900">
             Featured Work
           </h2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {[{
-            image: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80",
-            category: "Weddings",
-            title: "Sarah & John's Wedding"
-          }, {
-            image: "https://images.unsplash.com/photo-1521577352947-9bb58764b69a?auto=format&fit=crop&q=80",
-            category: "Portraits",
-            title: "Studio Portraits"
-          }, {
-            image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80",
-            category: "Events",
-            title: "Corporate Gala"
-          }].map((work, index) => <div key={index} className="cursor-pointer group">
+            {[
+              {
+                image: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80",
+                category: "Weddings",
+                title: "Sarah & John's Wedding",
+              },
+              {
+                image: "https://images.unsplash.com/photo-1521577352947-9bb58764b69a?auto=format&fit=crop&q=80",
+                category: "Portraits",
+                title: "Studio Portraits",
+              },
+              {
+                image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80",
+                category: "Events",
+                title: "Corporate Gala",
+              },
+            ].map((work, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                className="cursor-pointer group"
+              >
                 <div className="overflow-hidden rounded-lg shadow-sm">
-                  <img src={work.image} alt={work.title} className="object-cover w-full transition-transform duration-700 h-80 group-hover:scale-110" />
+                  <img
+                    src={work.image}
+                    alt={work.title}
+                    className="object-cover w-full transition-transform duration-700 h-80 group-hover:scale-110"
+                  />
                 </div>
                 <div className="mt-4">
                   <p className="text-sm text-gray-500">{work.category}</p>
@@ -83,7 +139,8 @@ export const Home = () => {
                     {work.title}
                   </h3>
                 </div>
-              </div>)}
+              </motion.div>
+            ))}
           </div>
           <div className="mt-12 text-center">
             <Link to="/gallery">
@@ -91,38 +148,63 @@ export const Home = () => {
             </Link>
           </div>
         </div>
-      </section>
-      <section className="py-24 bg-gray-50">
+      </motion.section>
+
+      {/* Testimonials Section */}
+      <motion.section
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        viewport={{ once: true }}
+        className="py-24 bg-gray-50"
+      >
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <h2 className="mb-16 text-3xl font-light text-center text-gray-900">
             Client Testimonials
           </h2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            {[{
-            quote: "Working with LENS was an absolute pleasure. They captured our wedding day perfectly!",
-            author: "Emily & James",
-            role: "Wedding Clients"
-          }, {
-            quote: "The portrait session exceeded my expectations. The photos are absolutely stunning!",
-            author: "Sarah Thompson",
-            role: "Portrait Client"
-          }, {
-            quote: "Professional, creative, and a joy to work with. Highly recommended!",
-            author: "Michael Roberts",
-            role: "Corporate Client"
-          }].map((testimonial, index) => <div key={index} className="p-6 bg-white rounded-lg shadow-sm">
-                <p className="mb-4 italic text-gray-600">
-                  "{testimonial.quote}"
-                </p>
-                <p className="font-medium text-gray-900">
-                  {testimonial.author}
-                </p>
+            {[
+              {
+                quote: "Working with LENS was an absolute pleasure. They captured our wedding day perfectly!",
+                author: "Emily & James",
+                role: "Wedding Clients",
+              },
+              {
+                quote: "The portrait session exceeded my expectations. The photos are absolutely stunning!",
+                author: "Sarah Thompson",
+                role: "Portrait Client",
+              },
+              {
+                quote: "Professional, creative, and a joy to work with. Highly recommended!",
+                author: "Michael Roberts",
+                role: "Corporate Client",
+              },
+            ].map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                className="p-6 bg-white rounded-lg shadow-sm"
+              >
+                <p className="mb-4 italic text-gray-600">"{testimonial.quote}"</p>
+                <p className="font-medium text-gray-900">{testimonial.author}</p>
                 <p className="text-sm text-gray-500">{testimonial.role}</p>
-              </div>)}
+              </motion.div>
+            ))}
           </div>
         </div>
-      </section>
-      <section className="py-24 text-white bg-gray-900">
+      </motion.section>
+
+      {/* Call to Action Section */}
+      <motion.section
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        viewport={{ once: true }}
+        className="py-24 text-white bg-gray-900"
+      >
         <div className="px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
           <h2 className="mb-8 text-3xl font-light">
             Ready to Create Something Beautiful?
@@ -144,6 +226,7 @@ export const Home = () => {
             </Link>
           </div>
         </div>
-      </section>
-    </div>;
+      </motion.section>
+    </div>
+  );
 };
