@@ -52,7 +52,7 @@ export const Contact = () => {
                 </div>
                 <div className="ml-4">
                   <h3 className="mb-1 font-medium text-gray-900">Email Us</h3>
-                  <p className="text-gray-600">contact@lens-photography.com</p>
+                  <p className="text-gray-600">Annelove@-photography.com</p>
                   <p className="mt-1 text-sm text-gray-500">
                     We'll respond within 24 hours
                   </p>
