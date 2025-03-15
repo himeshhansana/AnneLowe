@@ -40,7 +40,7 @@ export const Contact = () => {
                   <h3 className="mb-1 font-medium text-gray-900">Call Us</h3>
                   <p className="text-gray-600">(123) 456-7890</p>
                   <p className="mt-1 text-sm text-gray-500">
-                    Mon-Fri, 9am-6pm EST
+                    Mon-Fri, 9am-6pm EST edwidbu dwqjk
                   </p>
                 </div>
               </div>
