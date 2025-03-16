@@ -13,7 +13,7 @@ export const Layout = ({
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="text-xl font-semibold text-gray-900">
-              ANNE LOWE
+              SACHI LOWE
             </Link>
           </div>
           {/* Desktop Navigation */}
@@ -68,18 +68,18 @@ export const Layout = ({
       <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
           <div className="text-gray-600">
-            © 2025 Anne Lowe. All rights reserved.
+            © 2025 Sachi Lowe. All rights reserved.
           </div>
           <div className="flex space-x-6">
-            <a href="#" className="text-gray-600 hover:text-gray-900">
+            <a href="https://www.instagram.com/vintfade?igsh=MWl4dGo0bHBjajIybA%3D%3D&utm_source=qr" className="text-gray-600 hover:text-gray-900">
               <InstagramIcon size={20} />
             </a>
-            <a href="#" className="text-gray-600 hover:text-gray-900">
+            <a href="https://www.facebook.com/share/1GaJSvhi1y/?mibextid=LQQJ4d" className="text-gray-600 hover:text-gray-900">
               <FacebookIcon size={20} />
             </a>
-            <a href="#" className="text-gray-600 hover:text-gray-900">
+            {/* <a href="#" className="text-gray-600 hover:text-gray-900">
               <TwitterIcon size={20} />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
