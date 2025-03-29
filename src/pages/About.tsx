@@ -1,3 +1,8 @@
+import sachiaboutpic from '../assets/sachi.jpg'; // If the image is in src/assets
+import aboutstorypic from '../assets/about story pic.jpg'; // If the image is in src/assets
+import photograferatwork from '../assets/photografer at  work.jpg'; // If the image is in src/assets
+
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { CameraIcon, AwardIcon, UserIcon } from "lucide-react";
@@ -37,7 +42,7 @@ export const About = () => {
           </Link>
         </div>
         <div>
-          <img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&q=80" alt="Photographer at work" className="w-full h-auto rounded-lg shadow-lg" />
+          <img src={photograferatwork} alt="Photographer at work" className="w-full h-auto rounded-lg shadow-lg" />
         </div>
       </div>
     </section>
@@ -47,7 +52,7 @@ export const About = () => {
         <h2 className="mb-16 text-3xl font-light text-center">Our Story</h2>
         <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
           <div>
-            <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&q=80" alt="Studio equipment" className="w-full h-auto rounded-lg shadow-lg" />
+            <img src={aboutstorypic} alt="Studio equipment" className="w-full h-auto rounded-lg shadow-lg" />
           </div>
           <div>
             <p className="mb-6 text-gray-600">
@@ -85,9 +90,9 @@ export const About = () => {
             image: "",
             bio: ""
           }, {
-            name: "Sarah Chen",
+            name: "Schi",
             role: "Senior Photographer",
-            image: "https://scontent.fcmb2-2.fna.fbcdn.net/v/t1.6435-9/154740335_268306121331986_8433565080931932317_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG3ktkZtyzkSvIBQz_XHqD9nKWNwkpHwk2cpY3CSkfCTTodrMM1DKzYhjDfM1CA_V_PnFdKkxwoKTkRQCGixo5G&_nc_ohc=0qG-t3ept2AQ7kNvgFNalVT&_nc_oc=Adh2qBr7SV0eiqiU1IWGu4iYZ2w_OYDr52B2-vT2oBjSdFcIu-wcKgHFUlEvXhOKtqc&_nc_zt=23&_nc_ht=scontent.fcmb2-2.fna&_nc_gid=GwO0ovNeCnDxs1jYMVOFeQ&oh=00_AYEFoazzU75FESoUIgoyvcNi9tEVqPYwtW9CEmBFWvVBDA&oe=67FEA0A5",
+            image: sachiaboutpic,
             bio: "Expert in natural light photography and lifestyle shoots."
           }, {
             name: "",
