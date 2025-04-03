@@ -1,10 +1,16 @@
+import photograferatwork from '../assets/photografer at  work.jpg'; // If the image is in src/assets
+import natural from '../assets/natural1.jpg'; // If the image is in src/assets
+import event from '../assets/IMG-20250402-WA0010.jpg'; // If the image is in src/assets
+import rome from '../assets/IMG-20250402-WA0011.jpg'; // If the image is in src/ass
+
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 const images = [
-  "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80",
-  "https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&q=80",
-  "https://images.unsplash.com/photo-1554080353-a576cf803bda?auto=format&fit=crop&q=80",
+  natural,
+  event,
+  photograferatwork,
+  rome,
 ];
 
 export const HeroSlider = () => {

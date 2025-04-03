@@ -1,6 +1,7 @@
 import sachiaboutpic from '../assets/sachi.jpg'; // If the image is in src/assets
 import aboutstorypic from '../assets/about story pic.jpg'; // If the image is in src/assets
 import photograferatwork from '../assets/photografer at  work.jpg'; // If the image is in src/assets
+import photograferatworkEditor from '../assets/sachi akka aiya1.jpg'; // If the image is in src/assets
 
 
 import React from "react";
@@ -13,7 +14,7 @@ export const About = () => {
     <section className="px-4 mx-auto mb-24 max-w-7xl sm:px-6 lg:px-8">
       <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
         <div>
-          <h1 className="mb-6 text-4xl font-light">About Anne Lowe</h1>
+          <h1 className="mb-6 text-4xl font-light">About Sachi Lowe</h1>
           <p className="mb-6 text-gray-600">
             We are a team of passionate photographers dedicated to capturing
             life's most precious moments. With over a decade of experience,
@@ -78,33 +79,44 @@ export const About = () => {
       </div>
     </section>
     {/* Team Section */}
-    <section className="py-24">
-      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <h2 className="mb-16 text-3xl font-light text-center">
-          Meet Our Team
-        </h2>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+    <section className="py-16 md:py-24 bg-gray-50">
+      <div className="max-w-6xl px-5 mx-auto sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto mb-16 text-center">
+          <h2 className="text-4xl font-light text-gray-900 md:text-5xl">
+            Meet Our Team
+          </h2>
+          <p className="mt-4 text-lg text-gray-500">
+            The creative professionals behind your perfect moments
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-16 md:grid-cols-2 lg:gap-20">
           {[{
-            name: "",
-            role: "",
-            image: "",
-            bio: ""
+            name: "Shiwantha",
+            role: "Editor",
+            image: photograferatworkEditor,
+            bio: "Photo editor specializing in natural light & lifestyle imagery. Enhancing your moments with warmth, authenticity, and attention to detail."
           }, {
-            name: "Schi",
+            name: "Sachi",
             role: "Senior Photographer",
             image: sachiaboutpic,
-            bio: "Expert in natural light photography and lifestyle shoots."
-          }, {
-            name: "",
-            role: "",
-            image: "",
-            bio: ""
-          }].map((member, index) => <div key={index} className="text-center">
-            <img src={member.image} alt={member.name} className="object-cover w-48 h-48 mx-auto mb-4 rounded-full" />
-            <h3 className="text-xl font-medium">{member.name}</h3>
-            <p className="mb-2 text-gray-500">{member.role}</p>
-            <p className="text-gray-600">{member.bio}</p>
-          </div>)}
+            bio: "Senior Photographer specializing in natural light & lifestyle imagery. Capturing authentic moments with a timeless, emotive touch."
+          }].map((member, index) => (
+            <div key={index} className="text-center">
+              <div className="relative inline-block mb-8">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="object-cover w-64 h-64 rounded-full md:w-80 md:h-80"
+                />
+              </div>
+              <h3 className="text-2xl font-medium text-gray-900">{member.name}</h3>
+              <p className="mt-2 text-lg text-gray-500">{member.role}</p>
+              <p className="max-w-md mx-auto mt-4 leading-relaxed text-gray-600">
+                {member.bio}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

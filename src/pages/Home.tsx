@@ -1,3 +1,11 @@
+import photograferatwork from '../assets/photografer at  work.jpg'; // If the image is in src/assets
+import natural from '../assets/natural1.jpg'; // If the image is in src/assets
+import event from '../assets/event (2).jpg'; // If the image is in src/assets
+import wedding from '../assets/weddig (1).jpg'; // If the image is in src/assets
+
+
+
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { HeroSlider } from "../components/HeroSlider";
@@ -32,7 +40,7 @@ export const Home: React.FC = () => {
             }}
             className="mb-8 text-3xl font-bold text-gray-900 t bold"
           >
-            Welcome to Anne Lowe Photography
+            Welcome to Sachi Lowe Photography
           </motion.h2>
 
           {/* Animated Paragraph */}
@@ -147,17 +155,17 @@ export const Home: React.FC = () => {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                image: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80",
+                image: wedding,
                 category: "Weddings",
                 title: "Sarah & John's Wedding",
               },
               {
-                image: "https://images.unsplash.com/photo-1521577352947-9bb58764b69a?auto=format&fit=crop&q=80",
+                image: natural,
                 category: "Portraits",
                 title: "Studio Portraits",
               },
               {
-                image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80",
+                image: event,
                 category: "Events",
                 title: "Corporate Gala",
               },
