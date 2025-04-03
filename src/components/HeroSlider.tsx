@@ -75,17 +75,6 @@ export const HeroSlider = () => {
           >
             Professional photography that tells your story
           </motion.p>
-
-          <div className="flex flex-wrap justify-center gap-4">
-            <div className="flex flex-wrap justify-center gap-4">
-              <a href="gallery" className="px-8 py-3 text-gray-900 transition-colors bg-white rounded-md hover:bg-gray-100">
-                View Gallery
-              </a>
-              <a href="contact" className="px-8 py-3 text-white transition-colors bg-transparent border-2 border-white rounded-md hover:bg-white/10">
-                Book a Session
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </div>
